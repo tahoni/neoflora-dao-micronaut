@@ -3,8 +3,8 @@ plugins {
     id("io.micronaut.application") version "3.0.0"
 }
 
-version = "0.1"
-group = "info.tahoni"
+version = "1.00"
+group = "za.co.neoflora"
 
 repositories {
     mavenCentral()
@@ -15,40 +15,48 @@ micronaut {
     testRuntime("junit5")
     processing {
         incremental(true)
-        annotations("info.tahoni.*")
+        annotations("za.co.neoflora.*")
     }
 }
 
 dependencies {
+    // Annotation processing dependencies
     annotationProcessor("org.projectlombok:lombok")
     annotationProcessor("io.micronaut:micronaut-http-validation")
     annotationProcessor("io.micronaut.data:micronaut-data-processor")
+
+    // Core Micronaut dependencies
     implementation("io.micronaut:micronaut-http-client")
     implementation("io.micronaut:micronaut-runtime")
+    implementation("io.micronaut.problem:micronaut-problem-json")
+    implementation("io.micronaut:micronaut-validation")
+    implementation("javax.annotation:javax.annotation-api")
+
+    // Database dependencies
     implementation("io.micronaut.beanvalidation:micronaut-hibernate-validator")
     implementation("io.micronaut.data:micronaut-data-hibernate-jpa")
     implementation("io.micronaut.flyway:micronaut-flyway")
-    implementation("io.micronaut.problem:micronaut-problem-json")
     implementation("io.micronaut.sql:micronaut-jdbc-hikari")
-    implementation("javax.annotation:javax.annotation-api")
-    compileOnly("org.projectlombok:lombok")
-    runtimeOnly("ch.qos.logback:logback-classic")
     runtimeOnly("com.h2database:h2")
+
+    // Logging dependencies
+    runtimeOnly("ch.qos.logback:logback-classic")
+
+    // Project Lombok dependencies
+    compileOnly("org.projectlombok:lombok")
+
+    // Testing dependencies
     testImplementation("org.assertj:assertj-core")
     testImplementation("org.testcontainers:junit-jupiter")
     testImplementation("org.testcontainers:testcontainers")
-    implementation("io.micronaut:micronaut-validation")
-
     testImplementation("org.mockito:mockito-core")
-
 }
 
 
 application {
-    mainClass.set("info.tahoni.Application")
+    mainClass.set("za.co.neoflora.Application")
 }
 java {
     sourceCompatibility = JavaVersion.toVersion("17")
     targetCompatibility = JavaVersion.toVersion("17")
 }
-

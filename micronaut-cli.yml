@@ -1,5 +1,5 @@
 applicationType: default
-defaultPackage: info.tahoni
+defaultPackage: za.co.neoflora
 testFramework: junit
 sourceLanguage: java
 buildTool: gradle

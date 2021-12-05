@@ -1,4 +1,4 @@
-package info.tahoni;
+package za.co.neoflora;
 
 import io.micronaut.runtime.Micronaut;
 
