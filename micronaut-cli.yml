@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: info.tahoni
+testFramework: junit
+sourceLanguage: java
+buildTool: gradle
+features: [annotation-api, app-name, assertj, data, data-jpa, flyway, gradle, h2, hibernate-validator, http-client, java, java-application, jdbc-hikari, junit, logback, lombok, mockito, netty-server, problem-json, readme, shade, testcontainers, yaml]
