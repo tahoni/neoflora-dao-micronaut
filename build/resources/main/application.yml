@@ -1,12 +1,20 @@
 micronaut:
   application:
-    name: dao
+    name: neoflora-dao
+  server:
+    port: 8073
+    context-path: '/neoflora-dao'
+---
 datasources:
   default:
-    url: jdbc:h2:mem:devDb;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
-    driverClassName: org.h2.Driver
-    username: sa
-    password: ''
-    schema-generate: CREATE_DROP
-    dialect: H2
-jpa.default.properties.hibernate.hbm2ddl.auto: update
+    url: jdbc:mysql://localhost:3306/neoflora
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: neoflora_user
+    password: 'N30fl0r@-73'
+    schema-generate: NONE
+jpa:
+  default:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: none

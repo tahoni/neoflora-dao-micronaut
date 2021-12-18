@@ -9,6 +9,8 @@
         </encoder>
     </appender>
 
+    <logger name="za.co.neoflora" level="debug"/>
+
     <root level="info">
         <appender-ref ref="STDOUT" />
     </root>
