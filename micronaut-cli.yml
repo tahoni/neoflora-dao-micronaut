@@ -1,6 +1,6 @@
 applicationType: default
-defaultPackage: za.co.neoflora
+defaultPackage: ca.zo.neoflora
 testFramework: junit
 sourceLanguage: java
 buildTool: gradle
-features: [annotation-api, app-name, assertj, data, data-jpa, flyway, gradle, h2, hibernate-validator, http-client, java, java-application, jdbc-hikari, junit, logback, lombok, mockito, netty-server, problem-json, readme, shade, testcontainers, yaml]
+features: [annotation-api, app-name, assertj, cache-ehcache, data, data-jpa, flyway, graalvm, gradle, hibernate-validator, http-client, jackson-databind, java, java-application, jdbc-hikari, junit, logback, lombok, micronaut-build, mockito, mysql, netty-server, openapi, rabbitmq, reactor, reactor-http-client, readme, security, security-annotations, security-jwt, shade, swagger-ui, testcontainers, yaml]
